@@ -24,6 +24,7 @@ html{
     scroll-behavior: smooth;
 }
 
+/* implements menu */
 header{
     position: fixed;
     top:0; left: 0; right:0;
@@ -36,20 +37,24 @@ header{
     box-shadow: var(--box-shadow);
 }
 
+/* implements menu */
 header .logo {
     color: var(--black);
     font-size: 2.5rem;
     font-weight: bolder;
 }
 
+/* implements menu */
 header .logo i {
     color: var(--green);
 }
 
+/* implements menu */
 header .icons #menu-bars{
     display: none;
 }
 
+/* implements menu */
 header .navbar a {
     font-size: 1.7rem;
     border-radius: .5rem;
@@ -57,12 +62,14 @@ header .navbar a {
     color: var(--light-color);
 }
 
+/* implements menu */
 header .navbar a.active,
 header .navbar a:hover {
     color: #fff;
     background: var(--green);
 }
 
+/* implements menu */
 header .icons i,
 header .icons a {
     cursor: pointer;
@@ -77,6 +84,7 @@ header .icons a {
     background: #fff;
 }
 
+/* implements menu */
 header .icons i:hover,
 header .icons a:hover {
     color: #fff;
@@ -84,7 +92,68 @@ header .icons a:hover {
     transform: rotate(360deg);
 }
 
+/* implements search */
+#search-form{
+   position: fixed;
+   top: -110%; /* hidden */
+   left: 0;
+   height: 100%;
+   width: 100%;
+   z-index: 1004;
+   background: rgba(0,0,0,.8);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 0 1rem;
+}
 
+/* implements search */
+#search-form.active {
+    top: 0;
+}
+
+/* implements search */
+#search-form #search-box {
+    width: 50rem;
+    border-bottom: .1rem solid #fff;
+    padding: 1rem 0;
+    color: #fff;
+    font-size: 3rem;
+    text-transform: none;
+    background: none;
+}
+
+/* implements search */
+#search-form #search-box::placeholder {
+    color: #eee; /* Inclui cor no placeholder */
+}
+
+/* implements search */
+#search-form #search-box::-webkit-search-cancel-button {
+    -webkit-appearance: none; 
+}
+
+/* implements search */
+#search-form label {
+    color: #fff;
+    cursor: pointer;
+    font-size: 3rem;
+}
+
+/* implements search */
+#search-form label:hover {
+    color: var(--green);
+}
+
+/* implements search */
+#search-form #close {
+    position: absolute;
+    color: #fff;
+    cursor: pointer;
+    top: 2rem;
+    right: 3rem;
+    font-size: 5rem;
+}
 
 
 @media (max-width: 991px){
@@ -92,16 +161,19 @@ header .icons a:hover {
         font-size: 55%;
     }
 
+    /* implements menu */
     header {
         padding: 1rem 2rem;
     }
 }
 
 @media (max-width: 768px){
+    /* implements menu */
     header .icons #menu-bars{
         display: inline-block;
     }
 
+    /* implements menu */
     header .navbar {
         position: absolute;
         top: 100%;
@@ -114,10 +186,12 @@ header .icons a:hover {
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); /* efeito esconder e aparecer menu */
     }
 
+    /* implements menu */
     header .navbar.active {
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); /* efeito esconder e aparecer menu */
     }
 
+    /* implements menu */
     header .navbar a {
         display: block;
         padding: 1.5rem;
